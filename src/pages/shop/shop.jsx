@@ -4,15 +4,17 @@ import { Product } from "./product";
 import "./shop.css";
 
 export const Shop = () => {
-  <div className="shop">
-    <div className="shopTitle">
-      <h1>PedroTech Shop</h1>
-    </div>
+  return (
+    <div className="shop">
+      <div className="shopTitle">
+        <h1>PedroTech Shop</h1>
+      </div>
 
-    <div className="products">
-      {PRODUCTS.map((product) => (
-        <Product data={product} />
-      ))}
+      <div className="products">
+        {PRODUCTS.map((product) => (
+          <Product data={product} />
+        ))}
+      </div>
     </div>
-  </div>;
+  );
 };
