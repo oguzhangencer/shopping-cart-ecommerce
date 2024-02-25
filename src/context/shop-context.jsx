@@ -40,4 +40,19 @@ export const ShopContextProvider = (props) => {
   const checkout = () => {
     setCartItems(getDefaultCart());
   };
+
+  const contextValue = {
+    cartItems,
+    addToCart,
+    removeFromCart,
+    updateCartItemCount,
+    getDefaultCart,
+    checkout,
+  };
+
+  return (
+    <Shopcontext.Provider value={contextValue}>
+      {props.children}
+    </Shopcontext.Provider>
+  );
 };
